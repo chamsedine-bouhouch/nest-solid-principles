@@ -1,0 +1,24 @@
+# Get All Records of a Specific Type
+GET http://localhost:3000/records?type=Country HTTP/1.1
+
+# Get a Specific Record by ID
+GET http://localhost:3000/records/1720977684171?type=Country HTTP/1.1
+
+# Create a New Record
+POST http://localhost:3000/records?type=Country  HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"USA"
+}
+
+# Update an Existing Record
+PATCH http://localhost:3000/records/1720978091782?type=Country
+Content-Type: application/json
+
+{
+  "name": "United States of America"
+}
+
+# Delete a Specific Record
+DELETE http://localhost:3000/records/1720977719577?type=Country  HTTP/1.1
